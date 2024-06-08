@@ -1,0 +1,7 @@
+c=1
+a=10
+while c < 10
+circle a
+a=a+10
+c=c+1
+endloop

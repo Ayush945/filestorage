@@ -1,0 +1,9 @@
+drawto 100,100
+circle 20
+rectangle 10,10
+pen red
+moveto 50,50
+triangle 50,50
+moveto 100,100
+fill on
+circle 20

@@ -1,0 +1,4 @@
+a=10
+circle a
+a=a*5
+circle a

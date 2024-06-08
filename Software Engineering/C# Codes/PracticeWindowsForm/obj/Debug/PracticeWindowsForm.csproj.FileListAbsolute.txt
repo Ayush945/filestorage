@@ -1,0 +1,17 @@
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\bin\Debug\PracticeWindowsForm.exe.config
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\bin\Debug\PracticeWindowsForm.exe
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\bin\Debug\PracticeWindowsForm.pdb
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\obj\Debug\PracticeWindowsForm.csproj.AssemblyReference.cache
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\obj\Debug\PracticeWindowsForm.Properties.Resources.resources
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\obj\Debug\PracticeWindowsForm.csproj.GenerateResource.cache
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\obj\Debug\PracticeWindowsForm.csproj.CoreCompileInputs.cache
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\obj\Debug\PracticeWindowsForm.exe
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\obj\Debug\PracticeWindowsForm.pdb
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\obj\Debug\PracticeWindowsForm.Form1.resources
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\obj\Debug\PracticeWindowsForm.Calculator.resources
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\obj\Debug\PracticeWindowsForm.Form3.resources
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\obj\Debug\PracticeWindowsForm.Form4.resources
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\obj\Debug\PracticeWindowsForm.Form5.resources
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\obj\Debug\PracticeWindowsForm.Form6.resources
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\obj\Debug\PracticeWindowsForm.Form7.resources
+E:\Class\Course Material\L6\Sem 1\Software Engineering\C# Codes\PracticeWindowsForm\obj\Debug\PracticeWindowsForm.Form8.resources

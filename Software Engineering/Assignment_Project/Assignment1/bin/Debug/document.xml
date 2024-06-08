@@ -1,0 +1,1204 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Assignment1</name>
+    </assembly>
+    <members>
+        <member name="T:Assignment1.CommandFactory">
+            <summary>
+            This class creates the object of the class according to passed parameter
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandFactory.createInstance(System.String,Assignment1.POJO.Carrier)">
+            <summary>
+            Method which creates the object using switch case
+            </summary>
+            <param name="command">Command given by user</param>
+            <param name="carrier">POJO class to carry data</param>
+            <returns>Object according to commad</returns>
+            <exception cref="T:Assignment1.ExceptionHandler.IllegalSyntaxException">If no such class, throws errro</exception>
+        </member>
+        <member name="T:Assignment1.CommandHandler.ICommandHandler">
+            <summary>
+            Defines the base interface for all command handlers, providing methods for execution, validation, and error handling.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.ICommandHandler.execute">
+            <summary>
+            Executes the command.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.ICommandHandler.validate">
+            <summary>
+            Validates the command.
+            </summary>
+            <returns>True if the command is valid; otherwise, false.</returns>
+        </member>
+        <member name="M:Assignment1.CommandHandler.ICommandHandler.showError(System.String)">
+            <summary>
+            Throws an exception with the specified message.
+            </summary>
+            <param name="message">The message to include in the exception.</param>
+        </member>
+        <member name="T:Assignment1.CommandHandler.Impl.CircleHandler">
+            <summary>
+            Handles the circle command, drawing circles on a panel.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.CircleHandler.#ctor(System.String,Assignment1.POJO.Carrier)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.CommandHandler.Impl.CircleHandler"/> class.
+            </summary>
+            <param name="command">The circle command string.</param>
+            <param name="carrier">The carrier object containing drawing information.</param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.CircleHandler.execute">
+            <summary>
+            Executes the circle command and draws a circle on the panel.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.CircleHandler.validate">
+            <summary>
+            Checks whether the parameters sent for the circle command are valid.
+            </summary>
+            <returns>True if valid; otherwise, false.</returns>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.CircleHandler.showError(System.String)">
+            <summary>
+            Throws an exception if an invalid parameter is detected.
+            </summary>
+            <param name="message">The error message for the invalid parameter.</param>
+        </member>
+        <member name="T:Assignment1.CommandHandler.Impl.ClearHandler">
+            <summary>
+            Handles the clear command by clearing the drawing panel.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.ClearHandler.#ctor(System.String,Assignment1.POJO.Carrier)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.CommandHandler.Impl.ClearHandler"/> class.
+            </summary>
+            <param name="command">The clear command string.</param>
+            <param name="carrier">The carrier object containing drawing information.</param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.ClearHandler.execute">
+            <summary>
+            Executes the clear command by clearing the drawing panel.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.ClearHandler.validate">
+            <summary>
+            Validates the parameters of the clear command.
+            </summary>
+            <returns>True if validation succeeds; otherwise, false.</returns>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.ClearHandler.showError(System.String)">
+            <summary>
+            Throws an exception with the specified message if validation fails.
+            </summary>
+            <param name="message">The exception message.</param>
+            <exception cref="T:Assignment1.ExceptionHandler.IllegalParameterException">Thrown when validation fails.</exception>
+        </member>
+        <member name="T:Assignment1.CommandHandler.Impl.DrawToHandler">
+            <summary>
+            Handles the drawto command by drawing a line to specified coordinates.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.DrawToHandler.#ctor(System.String,Assignment1.POJO.Carrier)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.CommandHandler.Impl.DrawToHandler"/> class.
+            </summary>
+            <param name="command">The drawto command string.</param>
+            <param name="carrier">The carrier object containing drawing information.</param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.DrawToHandler.execute">
+            <summary>
+            Executes the drawto command by drawing a line to specified coordinates.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.DrawToHandler.validate">
+            <summary>
+            Validates the parameters of the drawto command.
+            </summary>
+            <returns>True if validation succeeds; otherwise, false.</returns>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.DrawToHandler.showError(System.String)">
+            <summary>
+            Throws an exception with the specified message if validation fails.
+            </summary>
+            <param name="message">The exception message.</param>
+            <exception cref="T:Assignment1.ExceptionHandler.IllegalParameterException">Thrown when validation fails.</exception>
+        </member>
+        <member name="T:Assignment1.CommandHandler.Impl.FillHandler">
+            <summary>
+            Handles the fill command by toggling the filling state for drawing shapes.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.FillHandler.#ctor(System.String,Assignment1.POJO.Carrier)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.CommandHandler.Impl.FillHandler"/> class.
+            </summary>
+            <param name="command">The fill command string.</param>
+            <param name="carrier">The carrier object containing drawing information.</param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.FillHandler.execute">
+            <summary>
+            Executes the fill command by toggling the filling state for drawing shapes.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.FillHandler.validate">
+            <summary>
+            Validates the parameters of the fill command.
+            </summary>
+            <returns>True if validation succeeds; otherwise, false.</returns>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.FillHandler.showError(System.String)">
+            <summary>
+            Throws an exception with the specified message if validation fails.
+            </summary>
+            <param name="message">The exception message.</param>
+            <exception cref="T:Assignment1.ExceptionHandler.IllegalParameterException">Thrown when validation fails.</exception>
+        </member>
+        <member name="T:Assignment1.CommandHandler.Impl.RangoliHandler">
+            <summary>
+            Class to draw Rangoli
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.RangoliHandler.carrier">
+            <summary>
+            field of carrier object
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.RangoliHandler.command">
+            <summary>
+            field of string command
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.RangoliHandler.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.RangoliHandler.#ctor(System.String,Assignment1.POJO.Carrier)">
+            <summary>
+            Initializing command and carrier
+            </summary>
+            <param name="command">command text</param>
+            <param name="carrier">poco as carrier</param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.RangoliHandler.execute">
+            <summary>
+            Execute the rangoli to draw on panel
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.RangoliHandler.showError(System.String)">
+            <summary>
+            Show Error as message
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:Assignment1.CommandHandler.Impl.IfHandler">
+            <summary>
+            Class to handle if method
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.IfHandler.command">
+            <summary>
+            field which stores given command
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.IfHandler.carrier">
+            <summary>
+            field having current state of panel
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.IfHandler.lengthOfBlock">
+            <summary>
+            Length of block of if condition
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.IfHandler.IfBlockPattern">
+            <summary>
+            Regex pattern for If block
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.IfHandler.#ctor(System.String,Assignment1.POJO.Carrier)">
+             <summary>
+            Constructor to initialize command, carrier and lengthOfBlock fields 
+             </summary>
+             <param name="command"></param>
+             <param name="carrier"></param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.IfHandler.execute">
+            <summary>
+            Execute the command for if
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.IfHandler.showError(System.String)">
+            <summary>
+            Show error when validating if block
+            </summary>
+            <param name="message">Error message</param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.IfHandler.validate">
+            <summary>
+            Validate the if block
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.IfHandler.lengthOfLine">
+            <summary>
+            method to return no of lines inside block
+            </summary>
+            <returns>interger as number of lines</returns>
+        </member>
+        <member name="T:Assignment1.CommandHandler.Impl.InkPenHandler">
+            <summary>
+            Handles the pen command by setting the drawing color.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.InkPenHandler.#ctor(System.String,Assignment1.POJO.Carrier)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.CommandHandler.Impl.InkPenHandler"/> class.
+            </summary>
+            <param name="command">The pen command string.</param>
+            <param name="carrier">The carrier object containing drawing information.</param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.InkPenHandler.execute">
+            <summary>
+            Executes the pen command by setting the drawing color.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.InkPenHandler.validate">
+            <summary>
+            Validates the parameters of the pen command.
+            </summary>
+            <returns>True if validation succeeds; otherwise, false.</returns>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.InkPenHandler.showError(System.String)">
+            <summary>
+            Throws an exception with the specified message if validation fails.
+            </summary>
+            <param name="message">The exception message.</param>
+            <exception cref="T:Assignment1.ExceptionHandler.IllegalParameterException">Thrown when validation fails.</exception>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.InkPenHandler.isColor(System.String)">
+            <summary>
+            Checks if the given string represents a valid color.
+            </summary>
+            <param name="color">The string representation of a color.</param>
+            <returns>True if it's a valid color; otherwise, false.</returns>
+        </member>
+        <member name="T:Assignment1.CommandHandler.Impl.MethodHandler">
+            <summary>
+            Class to handle method condition
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.MethodHandler.command">
+            <summary>
+            field which stores given command
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.MethodHandler.carrier">
+            <summary>
+            field having current state of panel
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.MethodHandler.methodName">
+            <summary>
+            individual command
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.MethodHandler.MethodLinePattern">
+            <summary>
+            Regex for method defination
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.MethodHandler.ExecutionLinePattern">
+            <summary>
+            regex for method invoker
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.MethodHandler.MethodBlock">
+            <summary>
+            regex for method block
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.MethodHandler.lineCode">
+            <summary>
+            no of line of code in field
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.MethodHandler.#ctor(System.String,System.String,Assignment1.POJO.Carrier)">
+             <summary>
+            Constructor to initialize command, carrier and lengthOfBlock fields 
+             </summary>
+             <param name="command"></param>
+             <param name="carrier"></param>
+             <param name="methodName"></param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.MethodHandler.execute">
+            <summary>
+            Execute the command for method
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.MethodHandler.showError(System.String)">
+            <summary>
+            Show error when validating method block
+            </summary>
+            <param name="message">Error message</param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.MethodHandler.validate">
+            /// <summary>
+            Validate the method block
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Assignment1.CommandHandler.Impl.MoveToHandler">
+            <summary>
+            Handles the moveto command by updating the drawing position.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.MoveToHandler.#ctor(System.String,Assignment1.POJO.Carrier)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.CommandHandler.Impl.MoveToHandler"/> class.
+            </summary>
+            <param name="command">The moveto command string.</param>
+            <param name="carrier">The carrier object containing drawing information.</param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.MoveToHandler.execute">
+            <summary>
+            Executes the moveto command by updating the drawing position.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.MoveToHandler.validate">
+            <summary>
+            Validates the parameters of the moveto command.
+            </summary>
+            <returns>True if validation succeeds; otherwise, false.</returns>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.MoveToHandler.showError(System.String)">
+            <summary>
+            Throws an exception with the specified message if validation fails.
+            </summary>
+            <param name="message">The exception message.</param>
+            <exception cref="T:Assignment1.ExceptionHandler.IllegalParameterException">Thrown when validation fails.</exception>
+        </member>
+        <member name="T:Assignment1.CommandHandler.Impl.RectangleHandler">
+            <summary>
+            Handles the rectangle command by drawing a rectangle on the panel.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.RectangleHandler.#ctor(System.String,Assignment1.POJO.Carrier)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.CommandHandler.Impl.RectangleHandler"/> class.
+            </summary>
+            <param name="command">The rectangle command string.</param>
+            <param name="carrier">The carrier object containing drawing information.</param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.RectangleHandler.execute">
+            <summary>
+            Executes the rectangle command by drawing a rectangle on the panel.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.RectangleHandler.validate">
+            <summary>
+            Validates the parameters of the rectangle command.
+            </summary>
+            <returns>True if validation succeeds; otherwise, false.</returns>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.RectangleHandler.showError(System.String)">
+            <summary>
+            Throws an exception with the specified message if validation fails.
+            </summary>
+            <param name="message">The exception message.</param>
+            <exception cref="T:Assignment1.ExceptionHandler.IllegalParameterException">Thrown when validation fails.</exception>
+        </member>
+        <member name="T:Assignment1.CommandHandler.Impl.ResetHandler">
+            <summary>
+            Handles the reset command by resetting the drawing position.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.ResetHandler.#ctor(System.String,Assignment1.POJO.Carrier)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.CommandHandler.Impl.ResetHandler"/> class.
+            </summary>
+            <param name="command">The reset command string.</param>
+            <param name="carrier">The carrier object containing drawing information.</param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.ResetHandler.execute">
+            <summary>
+            Executes the reset command by resetting the drawing position.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.ResetHandler.validate">
+            <summary>
+            Validates the parameters of the reset command.
+            </summary>
+            <returns>True if validation succeeds; otherwise, false.</returns>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.ResetHandler.showError(System.String)">
+            <summary>
+            Throws an exception with the specified message if validation fails.
+            </summary>
+            <param name="message">The exception message.</param>
+            <exception cref="T:Assignment1.ExceptionHandler.IllegalParameterException">Thrown when validation fails.</exception>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.StoreMethodHandler.command">
+            <summary>
+            field which stores given command
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.StoreMethodHandler.carrier">
+            <summary>
+            field having current state of panel
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.StoreMethodHandler.MethodDefinationPattern">
+            <summary>
+            Regex pattern for method defination
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.StoreMethodHandler.lineNumber">
+            <summary>
+            Line number of method
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.StoreMethodHandler.multiLine">
+            <summary>
+            full multiline text
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.StoreMethodHandler.MethodBlockPattern">
+            <summary>
+            Regex pattern for method block
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.StoreMethodHandler.#ctor(System.String,System.String,Assignment1.POJO.Carrier,System.Int32)">
+             <summary>
+            Constructor to initialize command, carrier and lengthOfBlock fields 
+             </summary>
+             <param name="command">command given by user</param>
+             <param name="carrier">necessary field carrying</param>
+             <param name="lineNumber">Line number of method</param>
+             <param name="multiLine"></param>
+        </member>
+        <member name="P:Assignment1.CommandHandler.Impl.StoreMethodHandler.LineNumber">
+            <summary>
+            getter and setter for lineNumber
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.StoreMethodHandler.execute">
+             <summary>
+            method to store variable and parameters 
+             </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.StoreMethodHandler.validate">
+            <summary>
+            Validation when storing method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.StoreMethodHandler.showError(System.String)">
+            <summary>
+            Method to throw error
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:Assignment1.CommandHandler.Impl.TriangleHandler">
+            <summary>
+            Handles the triangle command by drawing a triangle on the panel.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.TriangleHandler.#ctor(System.String,Assignment1.POJO.Carrier)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.CommandHandler.Impl.TriangleHandler"/> class.
+            </summary>
+            <param name="command">The triangle command string.</param>
+            <param name="carrier">The carrier object containing drawing information.</param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.TriangleHandler.execute">
+            <summary>
+            Executes the triangle command by drawing a triangle on the panel.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.TriangleHandler.validate">
+            <summary>
+            Validates the parameters of the triangle command.
+            </summary>
+            <returns>True if validation succeeds; otherwise, false.</returns>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.TriangleHandler.showError(System.String)">
+            <summary>
+            Throws an exception with the specified message if validation fails.
+            </summary>
+            <param name="message">The exception message.</param>
+            <exception cref="T:Assignment1.ExceptionHandler.IllegalParameterException">Thrown when validation fails.</exception>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.WhileHandler.command">
+            <summary>
+            field which stores given command
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.WhileHandler.carrier">
+            <summary>
+            field having current state of panel
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.WhileHandler.lengthOfBlock">
+            <summary>
+            Length of block of while condition
+            </summary>
+        </member>
+        <member name="F:Assignment1.CommandHandler.Impl.WhileHandler.WhileBlockPattern">
+            <summary>
+            Regex pattern for while block
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.WhileHandler.#ctor(System.String,Assignment1.POJO.Carrier)">
+             <summary>
+            Constructor to initialize command, carrier and lengthOfBlock fields 
+             </summary>
+             <param name="command"></param>
+             <param name="carrier"></param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.WhileHandler.showError(System.String)">
+            <summary>
+            Show error when validating if block
+            </summary>
+            <param name="message">Error message</param>
+        </member>
+        <member name="M:Assignment1.CommandHandler.Impl.WhileHandler.lengthOfLine">
+            <summary>
+            method to return no of lines inside block
+            </summary>
+            <returns>interger as number of lines</returns>
+        </member>
+        <member name="T:Assignment1.HelperClass.TextStore">
+            <summary>
+            Class to store every text run
+            </summary>
+        </member>
+        <member name="F:Assignment1.HelperClass.TextStore.singleText">
+            <summary>
+            field for single text
+            </summary>
+        </member>
+        <member name="F:Assignment1.HelperClass.TextStore.firstMultiText">
+            <summary>
+            field for text in first multiline text
+            </summary>
+        </member>
+        <member name="F:Assignment1.HelperClass.TextStore.secondMultiText">
+            <summary>
+            field for text in second multiline text
+            </summary>
+        </member>
+        <member name="M:Assignment1.HelperClass.TextStore.#ctor">
+            <summary>
+            Initialized all list
+            </summary>
+        </member>
+        <member name="T:Assignment1.HelperClass.OperationExecution">
+            <summary>
+            Helper class for operation execution
+            </summary>
+        </member>
+        <member name="F:Assignment1.HelperClass.OperationExecution.carrier">
+            <summary>
+            Carrier field
+            </summary>
+        </member>
+        <member name="M:Assignment1.HelperClass.OperationExecution.executeOperation(System.String,System.String,System.Single)">
+            <summary>
+            Method to check condition for loop and if
+            </summary>
+            <param name="firstOperand">Variable defined</param>
+            <param name="operation">Operator to carry operation</param>
+            <param name="second">Value to compare to</param>
+            <returns>True or False based on result</returns>
+            <exception cref="T:Assignment1.ExceptionHandler.IllegalVariableException">If the second operand is variable</exception>
+            <exception cref="T:Assignment1.ExceptionHandler.IllegalOperatorException">If the operator is not recognized</exception>
+        </member>
+        <member name="F:Assignment1.OptionClass.FreeDrawBox.DrawBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.FreeDrawBox.DrawBox.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Assignment1.OptionClass.FreeDrawBox.DrawBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Assignment1.OptionClass.SpinBox.SpinShape.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.SpinBox.SpinShape.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Assignment1.OptionClass.SpinBox.SpinShape.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.TimerBox.CountDown.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Assignment1.OptionClass.TimerBox.CountDown.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.TimerBox.CountDown.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Assignment1.OptionClass.TimerBox.CountDown.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Assignment1.OptionClass.Dialogue_Box.AboutBox">
+            <summary>
+            Represents the About Box for the application.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.Dialogue_Box.AboutBox.#ctor">
+            <summary>
+            Initializes a new instance of the AboutBox class.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.Dialogue_Box.AboutBox.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the close button.
+            Closes the About Box.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.Dialogue_Box.AboutBox.richTextBox1_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the TextChanged event of the richTextBox1 control.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.Dialogue_Box.AboutBox.label1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the label1 control.
+            </summary>
+        </member>
+        <member name="F:Assignment1.OptionClass.Dialogue_Box.AboutBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.Dialogue_Box.AboutBox.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Assignment1.OptionClass.Dialogue_Box.AboutBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Assignment1.OptionClass.Dialogue_Box.HelpBox">
+            <summary>
+            Represents the Help Box for providing information about GPL commands.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.Dialogue_Box.HelpBox.#ctor">
+            <summary>
+            Initializes a new instance of the HelpBox class.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.Dialogue_Box.HelpBox.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the close button.
+            Closes the Help Box.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.Dialogue_Box.HelpBox.richTextBox1_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the TextChanged event of the richTextBox1 control.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.Dialogue_Box.HelpBox.label1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the label1 control.
+            </summary>
+        </member>
+        <member name="F:Assignment1.OptionClass.Dialogue_Box.HelpBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.Dialogue_Box.HelpBox.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Assignment1.OptionClass.Dialogue_Box.HelpBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Assignment1.OptionClass.LoadCommand">
+            <summary>
+            This class loads commands from a file into a multiline textbox.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.LoadCommand.loadAllCommands(System.Windows.Forms.TextBox)">
+            <summary>
+            Opens the file explorer to load commands into a textbox.
+            </summary>
+            <param name="textBox">Textbox to load the commands.</param>
+        </member>
+        <member name="T:Assignment1.OptionClass.SaveCommand">
+            <summary>
+            This class saves commands to a text file.
+            </summary>
+        </member>
+        <member name="M:Assignment1.OptionClass.SaveCommand.saveCommands(System.String)">
+            <summary>
+            Saves the commands to a text file.
+            </summary>
+            <param name="commands">The commands to be saved.</param>
+        </member>
+        <member name="M:Assignment1.OptionClass.SaveCommand.saveImage(System.Windows.Forms.Panel,System.Collections.Generic.List{System.String})">
+             <summary>
+             Logic for saving image in file
+             </summary>
+             <param name="panel">The panel to draw on</param>
+            <param name="commands">The commands to draw</param> 
+        </member>
+        <member name="T:Assignment1.CommandParser">
+            <summary>
+            This class parses the command in single line and multipline textbox
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandParser.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.CommandParser"/> class.
+            </summary>
+        </member>
+        <member name="M:Assignment1.CommandParser.#ctor(Assignment1.POJO.Carrier)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.CommandParser"/> class.
+            </summary>
+            <param name="carrier">The carrier object containing drawing information.</param>
+        </member>
+        <member name="M:Assignment1.CommandParser.runCommand(System.String)">
+            <summary>
+            This method, creates the object of class according to the input command in single line command
+            </summary>
+            <param name="text">single line command</param>
+        </member>
+        <member name="M:Assignment1.CommandParser.runMultiCommand(System.String)">
+            <summary>
+            This method, creates multiple object of class according to the input command in multi line command
+            </summary>
+            <param name="multiText">mutiline command</param>
+        </member>
+        <member name="M:Assignment1.CommandParser.checkCommand(System.String)">
+            <summary>
+            This method check the parameter and syntax of command in multiline text box
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:Assignment1.CommandParser.checkSingleLineCommand(System.String)">
+            <summary>
+            This method checks the syntax and parameters of a single-line command.
+            </summary>
+            <param name="command"></param>
+            <returns>True if the command is valid, false otherwise.</returns>
+        </member>
+        <member name="M:Assignment1.CommandParser.checkMultiLineCommand(System.String,System.String)">
+            <summary>
+            Method to validate multiline command
+            </summary>
+            <param name="command"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Assignment1.CommandParser.loadTextFile(System.Windows.Forms.TextBox)">
+            <summary>
+            Method to load command in textbox
+            </summary>
+            <param name="multiTextBox">The texbox to write command</param>
+        </member>
+        <member name="M:Assignment1.CommandParser.saveTextFile(System.String)">
+            <summary>
+            Method to save the command from textbox
+            </summary>
+            <param name="multiTextBoxText">Text in the multiline textbox</param>
+        </member>
+        <member name="M:Assignment1.CommandParser.saveImageFile(System.Windows.Forms.Panel,System.Collections.Generic.List{System.String})">
+            <summary>
+            Parse the save image method
+            </summary>
+            <param name="panel">The drawing panel</param>
+            <param name="commands">The command to draw</param>
+        </member>
+        <member name="M:Assignment1.CommandParser.loadImageFile(System.Windows.Forms.Panel)">
+            <summary>
+            Parse the load image method
+            </summary>
+            <param name="panel">The drawing panel</param>
+        </member>
+        <member name="M:Assignment1.ExceptionHandler.IllegalOperatorException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.ExceptionHandler.IllegalOperatorException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="P:Assignment1.ExceptionHandler.IllegalOperatorException.CustomMessage">
+            <summary>
+            Gets or sets the custom message associated with the exception.
+            </summary>
+        </member>
+        <member name="T:Assignment1.ExceptionHandler.IllegalParameterException">
+            <summary>
+            Represents an exception thrown for illegal or invalid parameters.
+            </summary>
+        </member>
+        <member name="M:Assignment1.ExceptionHandler.IllegalParameterException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.ExceptionHandler.IllegalParameterException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="P:Assignment1.ExceptionHandler.IllegalParameterException.CustomMessage">
+            <summary>
+            Gets or sets the custom message associated with the exception.
+            </summary>
+        </member>
+        <member name="T:Assignment1.ExceptionHandler.IllegalSyntaxException">
+            <summary>
+            Represents an exception thrown for illegal syntax in a command.
+            </summary>
+        </member>
+        <member name="M:Assignment1.ExceptionHandler.IllegalSyntaxException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.ExceptionHandler.IllegalSyntaxException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="P:Assignment1.ExceptionHandler.IllegalSyntaxException.CustomMessage">
+            <summary>
+            Gets or sets the custom message associated with the exception.
+            </summary>
+        </member>
+        <member name="M:Assignment1.ExceptionHandler.IllegalVariableException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.ExceptionHandler.IllegalSyntaxException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="P:Assignment1.ExceptionHandler.IllegalVariableException.CustomMessage">
+            <summary>
+            Gets or sets the custom message associated with the exception.
+            </summary>
+        </member>
+        <member name="T:Assignment1.Form1">
+            <summary>
+            Represents the main form of the application.
+            </summary>
+        </member>
+        <member name="F:Assignment1.Form1.textStore">
+            <summary>
+            Object of text store class
+            </summary>
+        </member>
+        <member name="F:Assignment1.Form1.posX">
+            <summary>
+            field for panel position
+            </summary>
+        </member>
+        <member name="F:Assignment1.Form1.posY">
+            <summary>
+            field for panel position
+            </summary>
+        </member>
+        <member name="F:Assignment1.Form1.graphics">
+            <summary>
+            field for the graphics of panel
+            </summary>
+        </member>
+        <member name="F:Assignment1.Form1.color">
+            <summary>
+            field for color
+            </summary>
+        </member>
+        <member name="F:Assignment1.Form1.isFilled">
+            <summary>
+            field for if fill is on or off
+            </summary>
+        </member>
+        <member name="F:Assignment1.Form1.carrier">
+            <summary>
+            field to carry other fields
+            </summary>
+        </member>
+        <member name="F:Assignment1.Form1.variables">
+            <summary>
+            field for variable storage with its value
+            </summary>
+        </member>
+        <member name="F:Assignment1.Form1.methodName">
+            <summary>
+            field for method storage with its line number and parameter
+            </summary>
+        </member>
+        <member name="F:Assignment1.Form1.isTest">
+            <summary>
+            field to check for test
+            </summary>
+        </member>
+        <member name="M:Assignment1.Form1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Assignment1.Form1"/> class.
+            </summary>
+        </member>
+        <member name="M:Assignment1.Form1.runButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the "Run" button.
+            </summary>
+        </member>
+        <member name="M:Assignment1.Form1.exitToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the "Exit" menu item.
+            </summary>
+        </member>
+        <member name="M:Assignment1.Form1.aboutToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the "About" menu item.
+            </summary>
+        </member>
+        <member name="M:Assignment1.Form1.helpToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the "Help" menu item.
+            </summary>
+        </member>
+        <member name="M:Assignment1.Form1.firstTextboxToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the "Save" menu item for first textbox.
+            </summary>
+        </member>
+        <member name="M:Assignment1.Form1.secondTextboxToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the "Save" menu item for second textbox.
+            </summary>
+        </member>
+        <member name="M:Assignment1.Form1.imageToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Save the image of panel
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Assignment1.Form1.imageToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Load the image in panel
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Assignment1.Form1.syntaxButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the "Syntax" button.
+            </summary>
+        </member>
+        <member name="M:Assignment1.Form1.firstTextboxToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the "Load" menu item for first textbox.
+            </summary>
+        </member>
+        <member name="M:Assignment1.Form1.secongTextboxToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the "Load" menu item for second textbox.
+            </summary>
+        </member>
+        <member name="F:Assignment1.Form1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Assignment1.Form1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Assignment1.Form1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Assignment1.POJO.Carrier">
+            <summary>
+            Represents a carrier for graphical elements on a panel.
+            </summary>
+        </member>
+        <member name="F:Assignment1.POJO.Carrier.variables">
+            <summary>
+            Dictionary to store variable and its value
+            </summary>
+        </member>
+        <member name="F:Assignment1.POJO.Carrier.methodName">
+            <summary>
+            Dictionary to store method and its line number as well as no of parameter
+            </summary>
+        </member>
+        <member name="M:Assignment1.POJO.Carrier.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Assignment1.POJO.Carrier.#ctor(System.Single,System.Single,System.Drawing.Graphics,System.Windows.Forms.Panel,System.Drawing.Color,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Single},System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.Int32,System.Int32}},System.Boolean)">
+            <summary>
+            Initializes a new instance of the Carrier class.
+            </summary>
+            <param name="positionX">The X-coordinate of the carrier.</param>
+            <param name="positionY">The Y-coordinate of the carrier.</param>
+            <param name="graphics">The Graphics object used for drawing.</param>
+            <param name="panel">The Panel where the carrier is located.</param>
+            <param name="color">The color of the carrier.</param>
+            <param name="isFilled">Indicates whether the carrier is filled or not.</param>
+            <param name="variables">The user defined variables</param>
+            <param name="methodName">The user defined methods</param>
+            <param name="isTest">If input for execution or validation</param>
+        </member>
+        <member name="P:Assignment1.POJO.Carrier.Graphics">
+            <summary>
+            Gets or sets the Graphics object used for drawing.
+            </summary>
+        </member>
+        <member name="P:Assignment1.POJO.Carrier.Panel">
+            <summary>
+            Gets or sets the Panel where the carrier is located.
+            </summary>
+        </member>
+        <member name="P:Assignment1.POJO.Carrier.Color">
+            <summary>
+            Gets or sets the color of the carrier.
+            </summary>
+        </member>
+        <member name="P:Assignment1.POJO.Carrier.IsFilled">
+            <summary>
+            Gets or sets a value indicating whether the carrier is filled or not.
+            </summary>
+        </member>
+        <member name="P:Assignment1.POJO.Carrier.PositionX">
+            <summary>
+            Gets or sets the X-coordinate of the carrier.
+            </summary>
+        </member>
+        <member name="P:Assignment1.POJO.Carrier.PositionY">
+            <summary>
+            Gets or sets the Y-coordinate of the carrier.
+            </summary>
+        </member>
+        <member name="P:Assignment1.POJO.Carrier.Variables">
+            <summary>
+            Store the user defined variable
+            </summary>
+        </member>
+        <member name="P:Assignment1.POJO.Carrier.MethodName">
+             <summary>
+            store the user defined methods 
+             </summary>
+        </member>
+        <member name="P:Assignment1.POJO.Carrier.IsTest">
+            <summary>
+            store the boolean for test
+            </summary>
+        </member>
+        <member name="M:Assignment1.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:Assignment1.Validation.ICommandValidator">
+            <summary>
+            Interface for validating commands.
+            </summary>
+        </member>
+        <member name="M:Assignment1.Validation.ICommandValidator.isCommandValid(System.String)">
+            <summary>
+            Validates the given command.
+            </summary>
+            <param name="command">The command to validate.</param>
+            <returns>True if the command is valid; otherwise, false.</returns>
+        </member>
+        <member name="M:Assignment1.Validation.ICommandValidator.isMultiCommandValid(System.String,System.String)">
+            <summary>
+            Validates the given multi command.
+            </summary>
+            <param name="multiCommand"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Assignment1.Validation.impl.CommandValidatorImpl">
+            <summary>
+            Implementation of the ICommandValidator interface for command validation.
+            </summary>
+        </member>
+        <member name="M:Assignment1.Validation.impl.CommandValidatorImpl.#ctor">
+            <summary>
+            Initializes a new instance of the CommandValidatorImpl class.
+            </summary>
+        </member>
+        <member name="M:Assignment1.Validation.impl.CommandValidatorImpl.isCommandValid(System.String)">
+            <summary>
+            Validates the given command using a command parser.
+            </summary>
+            <param name="command">The command to validate.</param>
+            <returns>True if the command is valid; otherwise, false.</returns>
+        </member>
+        <member name="M:Assignment1.Validation.impl.CommandValidatorImpl.isMultiCommandValid(System.String,System.String)">
+            <summary>
+            Validates the given command using a command parser for multi command
+            </summary>
+            <param name="multiCommand">The command to validate.</param>
+            <param name="text">Whole Command</param>
+            <returns>True if the command is valid; otherwise, false.</returns>
+        </member>
+        <member name="T:Assignment1.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Assignment1.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Assignment1.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

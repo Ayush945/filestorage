@@ -1,0 +1,5 @@
+method add (a,b)
+circle a
+rectangle a,b
+endmethod
+add (50,100)

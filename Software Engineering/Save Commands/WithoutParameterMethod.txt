@@ -1,0 +1,4 @@
+method add ()
+circle 100
+endmethod
+add ()

@@ -1,0 +1,16 @@
+radius=10
+if radius == 10
+circle radius
+rectangle radius,radius
+endif
+width=20
+height=20
+count=1
+while count < 10
+circle radius
+radius=radius+10
+rectangle width,height
+width=width+10
+height=height+10
+count=count+1
+endloop

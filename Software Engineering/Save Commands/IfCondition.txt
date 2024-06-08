@@ -1,0 +1,4 @@
+a=50
+if a < 100
+circle a
+endif

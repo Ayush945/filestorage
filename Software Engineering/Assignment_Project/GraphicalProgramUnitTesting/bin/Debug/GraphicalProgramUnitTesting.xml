@@ -1,0 +1,504 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GraphicalProgramUnitTesting</name>
+    </assembly>
+    <members>
+        <member name="T:GraphicalProgramUnitTesting.Component2_Test.IfHandlerTest">
+            <summary>
+            Test class for If Condition
+            </summary>
+        </member>
+        <member name="F:GraphicalProgramUnitTesting.Component2_Test.IfHandlerTest.validator">
+            <summary>
+            The command validator used for testing.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.IfHandlerTest.#ctor">
+            <summary>
+            Initializes a new instance of the validator field
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.IfHandlerTest.endIfTest">
+            <summary>
+            Test to check endif
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.IfHandlerTest.firstOperandCondition">
+            <summary>
+            Test for first operands as number
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.IfHandlerTest.secondOperandCondition">
+            <summary>
+            Test for second operands as word
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.IfHandlerTest.workingIfCondition">
+            <summary>
+            Test for working if condtion
+            </summary>
+        </member>
+        <member name="T:GraphicalProgramUnitTesting.Component2_Test.MethodHandlerTest">
+            <summary>
+            Test class for method handler
+            </summary>
+        </member>
+        <member name="F:GraphicalProgramUnitTesting.Component2_Test.MethodHandlerTest.validator">
+            <summary>
+            Object of ICommandValidator class
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.MethodHandlerTest.#ctor">
+            <summary>
+            Initialize the field validator
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.MethodHandlerTest.checkMethodParameter">
+            <summary>
+            Check the parameter of method invoker and method defination
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.MethodHandlerTest.checkDifferentMethodParameter">
+            <summary>
+            Check the different parameter of method invoker and method defination
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.MethodHandlerTest.checkMethodInvoker">
+            <summary>
+            Test method invoker
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.MethodHandlerTest.checkMethodInvokerParameter">
+            <summary>
+            Test method invoker with word as parameter
+            </summary>
+        </member>
+        <member name="T:GraphicalProgramUnitTesting.Component2_Test.StoreMethodTest">
+            <summary>
+            Test class for method store
+            </summary>
+        </member>
+        <member name="F:GraphicalProgramUnitTesting.Component2_Test.StoreMethodTest.validator">
+            <summary>
+            Object of ICommandValidator class
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.StoreMethodTest.#ctor">
+            <summary>
+            Initialize the field validator
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.StoreMethodTest.testMethodDefination">
+            <summary>
+            Test method Defination
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.StoreMethodTest.testMethodParameter">
+            <summary>
+            Test numbers as parameter
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.StoreMethodTest.testProperMethodParamerter">
+            <summary>
+            Test proper method parameter
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.StoreMethodTest.testMethodBody">
+            <summary>
+            Test method without endmethod
+            </summary>
+        </member>
+        <member name="T:GraphicalProgramUnitTesting.Component2_Test.WhileHandlerTest">
+            <summary>
+            Test for while condition
+            </summary>
+        </member>
+        <member name="F:GraphicalProgramUnitTesting.Component2_Test.WhileHandlerTest.validator">
+            <summary>
+            The command validator used for testing.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.WhileHandlerTest.#ctor">
+            <summary>
+            Initializes a new instance of the validator field
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.WhileHandlerTest.endLoopTest">
+            <summary>
+            Test to check endloop
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.WhileHandlerTest.firstOperandCondition">
+            <summary>
+            Test for first operands as number
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.WhileHandlerTest.secondOperandCondition">
+            <summary>
+            Test for second operands as word
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.WhileHandlerTest.workingWhileCondition">
+            <summary>
+            Test for working while condtion
+            </summary>
+        </member>
+        <member name="T:GraphicalProgramUnitTesting.Component2_Test.VariableAssignmentTest">
+            <summary>
+            Test class for variable assignment
+            </summary>
+        </member>
+        <member name="F:GraphicalProgramUnitTesting.Component2_Test.VariableAssignmentTest.validator">
+            <summary>
+            The command validator used for testing.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.VariableAssignmentTest.#ctor">
+            <summary>
+            Initializes a new instance of the validator field.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.VariableAssignmentTest.positiveNumberAssignment">
+            <summary>
+            Test method for testing positive number assignment
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.VariableAssignmentTest.wordAssignment">
+            <summary>
+            Test method for testing word assignment
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.VariableAssignmentTest.wordAddition">
+            <summary>
+            Test for word addition
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.VariableAssignmentTest.wordNumberAddition">
+            <summary>
+            Test for word and number addition
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.Component2_Test.VariableAssignmentTest.operandSignTest">
+            <summary>
+            Test for only one operand with sign
+            </summary>
+        </member>
+        <member name="T:GraphicalProgramUnitTesting.ImplTest.CircleHandlerTest">
+            <summary>
+            Test Class to test the functionality of the CircleHandler class.
+            </summary>
+        </member>
+        <member name="F:GraphicalProgramUnitTesting.ImplTest.CircleHandlerTest.validator">
+            <summary>
+            The command validator used for testing.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.CircleHandlerTest.#ctor">
+            <summary>
+            Initializes a new instance of the validator class.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.CircleHandlerTest.CheckCircleSyntax">
+            <summary>
+            Test method to check if the 'circle' command syntax is valid.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.CircleHandlerTest.CheckCirclePositiveParameter">
+            <summary>
+            Test method to check for a positive parameter in the 'circle' command.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.CircleHandlerTest.CheckCircleNegativeParameter">
+            <summary>
+            Test method to check for a negative parameter in the 'circle' command.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.CircleHandlerTest.CheckCircleIntegerParameter">
+            <summary>
+            Test method to check for non-integer parameter in the 'circle' command.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.CircleHandlerTest.CheckCircleLength">
+            <summary>
+            Test method to check if the number of parameters in the 'circle' command is correct.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.CircleHandlerTest.CheckCircleCaseInsensitive">
+            <summary>
+            Test method to check if the 'circle' command is case-insensitive.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.CircleHandlerTest.CheckCircleValidWithDecimal">
+            <summary>
+            Test method to check if the 'circle' command with a decimal radius is valid.
+            </summary>
+        </member>
+        <member name="T:GraphicalProgramUnitTesting.ImplTest.DrawToHandlerTest">
+            <summary>
+            Test Class to test DrawToHandler class
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.DrawToHandlerTest.checkDrawToSyntax">
+            <summary>
+            Test method to check if command drawto is working
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.DrawToHandlerTest.checkDrawToLength">
+            <summary>
+            Test method to check if no of parameter is correct
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.DrawToHandlerTest.checkDrawToParameterInteger">
+            <summary>
+            Test method to check if the parameter not alphaber
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.DrawToHandlerTest.checkDrawToNegativeParameter">
+            <summary>
+            Test method to check negative parameter
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.DrawToHandlerTest.CheckDrawToCaseInsensitive">
+            <summary>
+            Test method to check if the 'drawto' command is case-insensitive.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.DrawToHandlerTest.CheckDrawToValidWithDecimal">
+            <summary>
+            Test method to check if the 'drawto' command with a decimal radius is valid.
+            </summary>
+        </member>
+        <member name="T:GraphicalProgramUnitTesting.ImplTest.MoveToHandlerTest">
+            <summary>
+            Test Class to test MoveToHandler class
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.MoveToHandlerTest.#ctor">
+            <summary>
+            Initialize the validator field
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.MoveToHandlerTest.checkMoveToSyntax">
+            <summary>
+            Test method to check if command Move to is working
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.MoveToHandlerTest.checkMoveToNegativeParameter">
+            <summary>
+            Test method to check for negative parameter
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.MoveToHandlerTest.checkMoveToIntegerParameter">
+            <summary>
+            Test method to check for alphabets
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.MoveToHandlerTest.checkMoveToLength">
+            <summary>
+            Test method to check if no of parameter is correct
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.MoveToHandlerTest.CheckMoveToCaseInsensitive">
+            <summary>
+            Test method to check if the 'moveto' command is case-insensitive.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.MoveToHandlerTest.CheckMoveToValidWithDecimal">
+            <summary>
+            Test method to check if the 'moveto' command with a decimal radius is valid.
+            </summary>
+        </member>
+        <member name="T:GraphicalProgramUnitTesting.ImplTest.RectangleHandlerTest">
+            <summary>
+            Test Class to test RectangleHandler class
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.RectangleHandlerTest.#ctor">
+            <summary>
+            Initialize validator field
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.RectangleHandlerTest.checkRectangleSyntax">
+            <summary>
+            Test method to check if command rectangle is working
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.RectangleHandlerTest.checkRectangleNegativeParameter">
+            <summary>
+            Test method to check for negative parameter
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.RectangleHandlerTest.checkRectangleIntegerParameter">
+            <summary>
+            Test method to check for alphabets
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.RectangleHandlerTest.checkRectangleLength">
+            <summary>
+            Test method to check if no of parameter is correct
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.RectangleHandlerTest.CheckRectangleCaseInsensitive">
+            <summary>
+            Test method to check if the 'rectangle' command is case-insensitive.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.RectangleHandlerTest.CheckRectangleValidWithDecimal">
+            <summary>
+            Test method to check if the 'rectangle' command with a decimal radius is valid.
+            </summary>
+        </member>
+        <member name="T:GraphicalProgramUnitTesting.ImplTest.TriangleHandlerTest">
+            <summary>
+            Test Class to test TriangleHandler class
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.TriangleHandlerTest.#ctor">
+            <summary>
+            Initialize validator field
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.TriangleHandlerTest.checkTriangleSyntax">
+            <summary>
+            Test method to check if command triangle is working
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.TriangleHandlerTest.checkTriangleNegativeParameter">
+            <summary>
+            Test method to check for negative parameter
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.TriangleHandlerTest.checkTriangleIntegerParameter">
+            <summary>
+            Test method to check for alphabets
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.TriangleHandlerTest.checkTriangleParameterLength">
+            <summary>
+            Test method to check if no of parameter is correct
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.TriangleHandlerTest.CheckTriangleCaseInsensitive">
+            <summary>
+            Test method to check if the 'triangle' command is case-insensitive.
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.TriangleHandlerTest.CheckTriangleValidWithDecimal">
+            <summary>
+            Test method to check if the 'triangle' command with a decimal radius is valid.
+            </summary>
+        </member>
+        <member name="T:GraphicalProgramUnitTesting.ImplTest.ClearHandlerTest">
+            <summary>
+            Test Class to test ClearHandler class
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.ClearHandlerTest.#ctor">
+            <summary>
+            Constructor and initialization of validator field
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.ClearHandlerTest.checkClearSyntax">
+            <summary>
+            Test method to check if command clear is working
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.ClearHandlerTest.checkClearParameterLength">
+            <summary>
+            Test method to check if no of parameter is correct
+            </summary>
+            
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.ClearHandlerTest.CheckClearCaseInsensitive">
+            <summary>
+            Test method to check if the 'clear' command is case-insensitive.
+            </summary>
+        </member>
+        <member name="T:GraphicalProgramUnitTesting.ImplTest.ResetHandlerTest">
+            <summary>
+            Test Class to test ResetHandler class
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.ResetHandlerTest.#ctor">
+            <summary>
+            Initialize validator field
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.ResetHandlerTest.checkResetSyntax">
+            <summary>
+            Test method to check if command reset is working
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.ResetHandlerTest.checkResetParameterLength">
+            <summary>
+            Test method to check if no of parameter is correct
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.ResetHandlerTest.CheckResetCaseInsensitive">
+            <summary>
+            Test method to check if the 'reset' command is case-insensitive.
+            </summary>
+        </member>
+        <member name="T:GraphicalProgramUnitTesting.ImplTest.InkPenHandlerTest">
+            <summary>
+            Test Class to test InkPenHandler class
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.InkPenHandlerTest.#ctor">
+            <summary>
+            Initialize validator field
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.InkPenHandlerTest.checkPenSyntax">
+            <summary>
+            Test method to check if command pen is working
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.InkPenHandlerTest.checkPenColorParameter">
+            <summary>
+            Test method to check if parameter is color or random string
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.InkPenHandlerTest.checkPenLength">
+            <summary>
+            Test method to check if no of parameter is correct
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.InkPenHandlerTest.checkPenParameterInteger">
+            <summary>
+            Test method to check if the parameter is color and not integer
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.InkPenHandlerTest.CheckInkPenCaseInsensitive">
+            <summary>
+            Test method to check if the 'pen' command is case-insensitive.
+            </summary>
+        </member>
+        <member name="T:GraphicalProgramUnitTesting.ImplTest.FillHandlerTest">
+            <summary>
+            Test Class to test FillHandler class
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.FillHandlerTest.checkFillSyntax">
+            <summary>
+            Test method to check if command Fill is working
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.FillHandlerTest.checkFillLength">
+            <summary>
+            Test method to check if no of parameter is correct
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.FillHandlerTest.checkFillParameterInteger">
+            <summary>
+            Test method to check if the parameter not integer
+            </summary>
+        </member>
+        <member name="M:GraphicalProgramUnitTesting.ImplTest.FillHandlerTest.CheckFillCaseInsensitive">
+            <summary>
+            Test method to check if the 'fill' command is case-insensitive.
+            </summary>
+        </member>
+    </members>
+</doc>
